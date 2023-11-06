@@ -33,7 +33,7 @@ class OsuCollectionDB:
             self.version = self._reader.read_uint()
             self.nr_collections = self._reader.read_uint()
 
-            self.collections: Dict[str, OsuCollection] = {}
+            self.collections: Dict[str, OsuCollection] = dict()
             for col_no in range(self.nr_collections):
                 collection_name = self._reader.read_string()
                 nr_beatmaps = self._reader.read_uint()

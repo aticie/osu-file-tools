@@ -4,7 +4,7 @@ import typing
 
 class OsuBeatmap:
 
-    def __init__(self, contents):
+    def __init__(self, contents: str):
         self.beatmap_hash = hashlib.md5(contents).hexdigest()
         self.contents = contents
         # Todo: Parse beatmap
